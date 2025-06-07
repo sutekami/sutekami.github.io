@@ -73,6 +73,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
+        working-directory: ${{ github.workspace }}/front/countryside
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       # 以下の実行はSSGにするならいらないらしい
       # - name: Build with Next.js
