@@ -1,0 +1,6 @@
+# IGNORE ENV
+.env
+
+# IGNORE ENTIRE
+node_modules
+.DS_Store

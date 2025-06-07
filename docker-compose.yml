@@ -1,0 +1,12 @@
+services:
+  front:
+    build:
+      context: ./front/
+      args:
+        - FRONT_WORKDIR_PATH=${FRONT_WORKDIR_PATH}
+    env_file:
+      - ./.env
+    volumes:
+      - ./front:${FRONT_WORKDIR_PATH}
+    ports:
+      - 3000:${FRONT_PORT}
